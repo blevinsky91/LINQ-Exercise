@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<Video> videoGames = ListManager.Data();
+
+            videoGames.OrderBy(x => x.Name.Length).ToList().ForEach(x => Console.WriteLine(x.Name));
+
+
+
+
         }
     }
 }
